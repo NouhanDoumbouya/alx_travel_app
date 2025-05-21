@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-c$kz_rmj=%kfef2w=enlpu=s^96)b())@xrw1*xct5tic*&yv5'
+SECRET_KEY = 'django-insecure-7ycnkl#&_6%#q44z64e7a^g(4&n^x63w@$0z^r(zgnb9=dv+i4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,7 +51,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ALLOW_ALL_ORIGINS = True  # In production, use a specific whitelist.
 
 ROOT_URLCONF = 'alx_travel_app.urls'
 
